@@ -1,0 +1,96 @@
+/* que. 1*/
+create table SEMP
+(
+EMPNO char(4),
+EMPNAME char(20),
+BASIC float(9,2),
+DEPTNO char(2),
+DEPTHEAD 	char(4)
+);
+/* que. 4*/
+
+insert into semp
+values('0001','SUNIL',6000,'10',null);
+
+insert into semp
+values('0002','HIREN',8000,'20',null);
+
+insert into semp
+values('0003','ALI',4000,'10','0001');
+
+insert into semp
+values('0004','GEORGE',6000,null,'0002');
+
+/* que. 2*/
+
+create table SDEPT
+(
+DEPTNO char(2),
+DEPTNAME 	char(15)
+);
+
+/* que. 3*/
+
+insert into SDEPT
+values('10','Development');
+
+insert into SDEPT
+values('20','Training');
+
+
+create table s
+(
+`s#`int(4),
+Sname varchar(10),
+status char(10),
+city varchar(10)
+);
+
+
+create table p
+(
+`p#` int(4),
+Pname varchar(10),
+color varchar(10),
+weight float(7,2),
+city varchar(10)
+);
+
+create table j
+(
+`j#` int(4),
+jname varchar(10),
+city varchar(10)
+);
+
+create table spj
+(
+`s#` int(4),
+`p#` int(4),
+`j#` int(4),
+qty float(7,2)
+);
+
+/* que.5 */
+
+select * from s;
+
+/* que.6 */
+
+select `s#`,sname from s;
+
+/* que.7 */
+
+select pname,color from p where city='London';
+
+/* que.8 */
+
+select city from s where city='London';
+
+/* que.9 */
+
+select city from s where city='London'or city='Athens';
+
+/* que.10*/
+
+select city from p where city='Athens'
